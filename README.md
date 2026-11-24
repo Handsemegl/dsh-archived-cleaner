@@ -20,17 +20,19 @@
 
 ## 安装
 
+### 从 GitHub 安装（推荐）
+
 ```powershell
-dsh plugin --profile web add file:C:/path/to/dsh-archived-cleaner
+dsh plugin --profile desktop add github:Handsemegl/dsh-archived-cleaner
 ```
 
-或让 DSH 智能体安装：
+> 桌面端注意：先打开一次桌面端初始化 profile，再**完全退出**（托盘 → 退出），执行命令后重新打开。浏览器端则把 `desktop` 换成 `web`，装完重启 `dsh web` 并刷新页面。
 
-```text
-帮我把这个目录安装为 DSH 插件：C:/path/to/dsh-archived-cleaner
+### 从本地目录安装
+
+```powershell
+dsh plugin --profile desktop add file:C:/path/to/dsh-archived-cleaner
 ```
-
-安装后**重启 web 端**（`dsh web`），刷新页面，在 设置 → 插件 中找到「归档清理」。
 
 ## HTTP 接口
 
@@ -63,5 +65,5 @@ node scripts/eval-check.mjs    # client bundle 求值 + apply + 插槽注册校�
 ## 卸载
 
 ```powershell
-dsh plugin --profile web remove dsh-archived-cleaner
+dsh plugin --profile desktop remove dsh-archived-cleaner
 ```
