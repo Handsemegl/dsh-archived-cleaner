@@ -1,0 +1,7 @@
+# dsh-archived-cleaner 插件注册补丁
+# 将本插件行插入 web profile 的装配清单：
+#   host 半区（exports "."）注册 归档会话列表 / 删除 两条 HTTP 路由；
+#   浏览器半区（exports "./client"）在设置页渲染「归档清理」区块。
+- insert:
+    - id: archived-cleaner
+      name: 'dsh-archived-cleaner'

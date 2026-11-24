@@ -1,0 +1,3 @@
+node_modules/
+scripts/ui-test/node_modules/
+scripts/ui-test/package-lock.json
